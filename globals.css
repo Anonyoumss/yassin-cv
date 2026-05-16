@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #000000;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.neon-text-cyan {
+  color: #00D9FF;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 40px rgba(0, 217, 255, 0.4);
+}
+
+.neon-text-lime {
+  color: #39FF14;
+  text-shadow: 0 0 20px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.4);
+}
+
+.neon-text-yellow {
+  color: #FFFF00;
+  text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 255, 0, 0.4);
+}
+
+.neon-text-purple {
+  color: #A020F0;
+  text-shadow: 0 0 20px rgba(160, 32, 240, 0.8), 0 0 40px rgba(160, 32, 240, 0.4);
+}
+
+.neon-glow {
+  position: relative;
+}
+
+.neon-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00D9FF, #39FF14, #FFFF00);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.neon-glow:hover::before {
+  opacity: 0.3;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+}
+
+.project-card {
+  background: rgba(0, 217, 255, 0.05);
+  border: 2px solid rgba(0, 217, 255, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  border-color: #00D9FF;
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.gradient-lime-cyan {
+  background: linear-gradient(135deg, #39FF14, #00D9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.icon-cyan { 
+  color: #00D9FF; 
+}
+
+.icon-lime { 
+  color: #39FF14; 
+}
+
+.icon-yellow { 
+  color: #FFFF00; 
+}
+
+.icon-purple { 
+  color: #A020F0; 
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: #00D9FF;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00D9FF;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00D9FF;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39FF14;
+}
