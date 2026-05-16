@@ -1,7 +1,6 @@
 import './globals.css'
-import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Yassin Abdalla - CV',
   description: 'High school innovator specializing in AI, robotics, and embedded systems',
 }
